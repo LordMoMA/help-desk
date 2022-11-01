@@ -5,6 +5,7 @@ const errorHandler = (error, _, res, next) => {
   console.log('error middleware')
 
   res.status(statusCode)
+  // send a json file not a html response
   res.json({
     message: error.message,
     stack: process.env.NODE_ENV === 'production' ? null : error.stack,
