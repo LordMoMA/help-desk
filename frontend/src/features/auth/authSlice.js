@@ -50,7 +50,8 @@ export const logout = createAction('auth/logout', () => {
 // NOTE: in cases of login or register pending or rejected then user will
 // already be null so no need to set to null in these cases
 
-// redux tool could see pending fulfilled ....
+// In redux tool we could see pending fulfilled ....
+
 export const authSlice = createSlice({
   name: 'auth',
   initialState,
